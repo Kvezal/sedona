@@ -11,7 +11,7 @@
   <body>
     <header class="main-header">
       <div class="sedona-logo">
-        <img src="" width="" height="" alt="sedona-лого">
+        <img src="img/sedona-logo.png" width="138" height="70" alt="sedona-лого">
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
@@ -33,18 +33,29 @@
     
     
     
-    <main>
-      <section class="welcome">        
-        <img src="" width="" height="" alt="">
-        <h1 class="promo-text">Седона — небольшой городок в Аризоне,  заслуживающий большего!</h1>                
+    <main class="container">
+      <section class="welcome">
+        <div class="wrapper-img">  
+          <img src="img/welcome.png" width="458" height="352" alt="Добро пожаловать">
+        </div>
+        <h1 class="title">Седона — небольшой городок в Аризоне,  заслуживающий большего!</h1>                
       </section>
       
       <section class="features">
+        <p class="header-list">
+          Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+        </p>
         <ul class="features-list">
           <li class="feature-item feature-item-1">
-            <h2 class="feature-title">Настоящий городок</h2>
-            <span>- №1 -</span>
-            <p class="feature-text">Седона - не атракцион для туристов, там течет своя жизнь</p>
+            <div class="background-feature-item-1">
+              <div class="feature-wrapper">
+                <h2 class="feature-title">Настоящий городок</h2>
+                <span>- №1 -</span>
+                <p class="feature-text">
+                  Седона - не атракцион для туристов, там течет своя жизнь
+                </p>
+              </div>
+            </div>
             <ul class="sub-features-list">
               <li class="sub-features-item">
                 <h3 class="feature-title">Жилье</h3>
@@ -61,9 +72,13 @@
             </ul>
           </li>
           <li class="feature-item feature-item-2">
-            <h2 class="feature-title">Там есть мост дьявола</h2>
-            <span>- №2 -</span>
-            <p class="feature-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <div class="feature-wrapper">
+              <h2 class="feature-title">Там есть мост дьявола</h2>
+              <span>- №2 -</span>
+              <p class="feature-text">
+                Да, по нему можно пройти! Если конечно вы осмелитесь
+              </p>
+            </div>
           </li>
           <li class="feature-item feature-item-3">
             <h2 class="feature-title">Небольшая площадь</h2>
@@ -104,12 +119,13 @@
       </p>
       <section class="footer-copyright">
         <span>Website by<span>
-        <img src="" width="" height="" alt="htmlacademy-лого">
+        <img src="img/htmlacademy-logo.png" width="" height="" alt="htmlacademy-лого">
       </section>
     </footer>
     
     
     
+<!--
     <form class="modal-search-form" action="index.html">
       <p class="wrapper-date">
         <label for="arrival-date-field">Дата заезда:</label>
@@ -133,5 +149,6 @@
       </p>
       <button class="btn-search" type="submit">Найти</button>
     </form>
+-->
   </body>
 </html>
