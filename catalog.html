@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona | Главная</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <header class="main-header">
+      <div class="sedona-logo">
+        <img src="" width="" height="" alt="sedona-лого">
+      </div>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li class="nav-item">
+            <a class="nav-link" href="">Информация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Фото и видео</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Карта штата</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>      
+    </header>
+    
+    
+    
+    <main>
+      <form class="filter-form" action="catalog.html">
+        <fieldset class="filter-group">
+          <legend class="filter-name">Инфраструктура:</legend>
+          <p>
+            <input type="checkbox" name="pool" id="pool-field">
+            <label for="pool-field">Бассейн</label>
+          </p>
+          <p>
+            <input type="checkbox" name="parking" id="parking-field">
+            <label for="parking-field">Парковка</label>
+          </p>
+          <p>
+            <input type="checkbox" name="wi-fi" id="wi-fi-field">
+            <label for="wi-fi-field">Wi-fi</label>
+          </p>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend class="filter-name">Тип жилья:</legend>
+          <p>
+            <input type="checkbox" name="hotel" id="hotel-field">
+            <label for="hotel-field">Гостиница</label>
+          </p>
+          <p>
+            <input type="checkbox" name="motel" id="motel-field">
+            <label for="motel-field">Мотель</label>
+          </p>
+          <p>
+            <input type="checkbox" name="apartments" id="apartments-field">
+            <label for="apartments-field">Апартаменты</label>
+          </p>
+        </fieldset>
+        <fieldset class="filter-price">
+          <legend>Стоимость в сутки (p):</legend>
+          <div class="price-controls">
+            <label class="min-price">От<input type="text" name="min-price" value="0"></label>
+            <label class="max-price">От<input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="price-range-controls">
+            <div class="price-range-controls-scale">
+              <div class="price-range-controls-diapason"></div>
+            </div>
+            <div class="price-range-toggle price-range-toggle-low"></div>
+            <div class="price-range-toggle price-range-toggle-high"></div>
+          </div>
+        </fieldset>
+        <buttom class="filter-btn" type="submit">Показать</buttom>
+      </form>
+      
+      <section class="sorting">
+        <span class="found">Найдено: 3</span>
+        <span class="sorting-text">Сортировать:</span>
+        <ul class="sorting-list">
+          <li class="sort-item"><a class="sort-link" href="#">По цене</a></li>
+          <li class="sort-item"><a class="sort-link" href="#">По типу</a></li>
+          <li class="sort-item"><a class="sort-link" href="#">По названию</a></li>
+          <li class="sort-item"><a class="sort-link sort-increase" href="#">По возрастанию</a></li>
+          <li class="sort-item"><a class="sort-link sort-decrease" href="#">По убыванию</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog">
+        <article class="catalog-item">
+          <img src="" width="" height="" alt="">
+          <div class="item-info">
+            <h2 class="subtitle">Amara Resort &#38; Spa</h2>
+            <p class="item-type">
+              <span>Гостиница</span>
+              <span>От 4000 р.</span>
+            </p>
+            <p class="item-btn">
+              <a class="more" href="#">Подробнее</a>
+              <a class="book-room" href="#">Забронировать</a>
+            </p>
+          </div>
+          <div class="item-rating star-4">
+            <span>Рейтинг: 8,5</span>
+          </div>
+        </article>
+        
+        <article class="catalog-item">
+          <img src="" width="" height="" alt="">
+          <div class="item-info">
+            <h2 class="subtitle">Desert Quail Inn</h2>
+            <p class="item-type">
+              <span>Мотель</span>
+              <span>От 3000 р.</span>
+            </p>
+            <p class="item-btn">
+              <a class="more" href="#">Подробнее</a>
+              <a class="book-room" href="#">Забронировать</a>
+            </p>
+          </div>
+          <div class="item-rating star-3">
+            <span>Рейтинг: 8,9</span>
+          </div>
+        </article>
+        
+        <article class="catalog-item">
+          <img src="" width="" height="" alt="">
+          <div class="item-info">
+            <h2 class="subtitle">Villas at Poco Diablo</h2>
+            <p class="item-type">
+              <span>Апартаменты</span>
+              <span>От 2000 р.</span>
+            </p>
+            <p class="item-btn">
+              <a class="more" href="#">Подробнее</a>
+              <a class="book-room" href="#">Забронировать</a>
+            </p>
+          </div>
+          <div class="item-rating star-2">
+            <span>Рейтинг: 9,2</span>
+          </div>
+        </article>
+      </section>
+    </main>    
+    
+    
+    
+    <footer class="main-footer">
+      <p class="tag">#visitsedona</p>
+      <p class="footer-social">
+        <a class="social-btn social-btn-tw" href="#"></a>
+        <a class="social-btn social-btn-fb" href="#"></a>
+        <a class="social-btn social-btn-yt" href="#"></a>
+      </p>
+      <div class="copyright">
+        <span>Website by<span>
+        <img src="" width="" height="" alt="htmlacademy-лого">
+      </div>
+    </footer>
+  </body>
+</html>
