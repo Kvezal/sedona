@@ -857,6 +857,9 @@ body {
 /*Подвал*/
 
 .main-footer {
+  position: relative;
+  z-index: 50;
+  
   display: flex;
   min-width: 768px;
   max-width: 1200px;

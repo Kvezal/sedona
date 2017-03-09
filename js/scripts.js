@@ -44,7 +44,6 @@ btnOpen.addEventListener('click', function (event) {
     wrapperDate[1].classList.remove('wrapper-date-close');
     wrapperNumberAdults.classList.remove('close-block');
     wrapperNumberChildren.classList.remove('close-block');
-    btnSearch.classList.remove('btn-search-close');    
-    
+    btnSearch.classList.remove('btn-search-close');
   }
 });
