@@ -109,7 +109,7 @@ body {
 .welcome {
   width: 100%;
   min-width: 768px;
-  min-height: 508px;  
+  min-height: 508px;
   
   background: url(../img/background-main-1.jpg) no-repeat center 30%;
   background-color: #879198;
@@ -117,6 +117,9 @@ body {
 }
 
 .wrapper-img {
+  position: relative;
+  z-index: 5;
+  
   box-sizing: border-box;
   min-width: 768px;
   max-width: 1200px;
@@ -133,6 +136,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
 .features {
@@ -708,6 +713,7 @@ body {
   min-width: 768px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 120px;
   
   text-transform: uppercase;
 }
@@ -861,10 +867,6 @@ body {
   background-color: rgba(255, 255, 255, .9);
 }
 
-.inner .main-footer {
-  margin-top: auto;
-}
-
 .footer-hashtag,
 .footer-social,
 .footer-copyright {
@@ -952,6 +954,20 @@ body {
 
 /*Модальное окно поиска гостиниц*/
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(0, 0, 0, .1);
+  
+  transition-duration: .5s;
+}
+
 .modal-search-form {
   position: relative;
   position: fixed;
@@ -964,8 +980,8 @@ body {
   align-content: flex-start;
   box-sizing: border-box;
   width: 568px;
-  height: 395px;
-  padding: 55px;
+  height: 481px;
+  padding: 141px 55px 55px;
   
   font-weight: 700;
   font-size: 14px;
@@ -980,8 +996,9 @@ body {
 
 .modal-search-form .order-btn {
   position: absolute;
-  top: -132px;
-  left: 0px;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
 .modal-search-form label {
@@ -1002,7 +1019,6 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
 }
 
 .wrapper-date input {
@@ -1124,7 +1140,6 @@ body {
 .btn-search {
   width: 100%;
   height: 58px;
-  margin-top: 53px;
   
   font-weight: 700;
   font-size: 21px;
@@ -1147,4 +1162,176 @@ body {
   color: rgba(255, 255, 255, .3);
   
   background-color: #5496bd;
+}
+
+/*Анимации*/
+
+
+/*Открывающееся модальное окно*/
+
+.modal-search-form-open {
+  visibility: visible;
+  
+  animation-name: open;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.wrapper-date-open, 
+.open-block,
+.btn-search-open {  
+  animation-delay: .6s;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+
+.wrapper-date-open {
+  animation-name: date-open;
+}
+
+.open-block {
+  animation-name: block-open;
+}
+
+.btn-search-open {
+  animation-name: btn-open;
+}
+
+/*Закрывающееся модальное окно*/
+
+.overlay-close {
+  top: 50%;
+  left: 50%;
+  
+  width: 0;
+  height: 0;  
+}
+
+.modal-search-form-close {
+  
+  animation-name: close;
+  animation-delay: .4s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.wrapper-date-close, 
+.close-block,
+.btn-search-close {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+
+.wrapper-date-close {
+  animation-name: date-close;
+}
+
+.close-block {
+  animation-name: block-close;
+}
+
+.btn-search-close {
+  animation-name: btn-close;
+}
+
+/*@-правила для открытия модального окна*/
+
+@keyframes open {
+  from {
+    top: 50%;
+    
+    height: 1px;
+  }
+  
+  60% {
+    top: 28%;
+    height: 481px;
+  }
+}
+
+@keyframes date-open {
+  from {
+    margin-bottom: 0px;
+    
+    opacity: 0;
+  }
+  
+  to {
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes block-open {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes btn-open {
+  from {    
+    margin-top: 0;
+    
+    opacity: 0;
+  }
+  
+  to {    
+    margin-top: 53px;
+  }
+}
+
+/*@-правила для закрытия модального окна*/
+
+@keyframes close {  
+  40% {
+    top: 28%;
+    height: 481px;
+  }  
+  
+  to {
+    top: 50%;
+    
+    height: 1px;
+    padding: 60px 55px 0px;
+    
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes date-close {  
+  from {
+    margin-bottom: 30px;
+  }
+  
+  to {
+    margin-bottom: 0px;
+    
+    opacity: 0;
+  }
+}
+
+@keyframes block-close {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes btn-close {  
+  from {    
+    margin-top: 53px;
+  }
+  
+  to {    
+    margin-top: 0;
+    
+    opacity: 0;
+  }
 }

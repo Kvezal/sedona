@@ -134,33 +134,34 @@
       </section>
     </footer>
     
+    <div class="overlay"></div>
     
-    
-    <form class="modal-search-form" action="index.html">
+    <form class="modal-search-form modal-search-form-open" action="index.html">
       <button class="order-btn" type="button">Поиск гостиницы в седоне</button>
-      <p class="wrapper-date">
+      <p class="wrapper-date wrapper-date-open">
         <label for="arrival-date-field">Дата заезда:</label>
         <input type="text" name="arrival-date" id="arrival-date-field" value="24 апреля 2017">
         <button class="btn-calendar" type="button"></button>
       </p>
-      <p class="wrapper-date">
+      <p class="wrapper-date wrapper-date-open">
         <label for="departure-date-field">Дата выезда:</label>
         <input type="text" name="departure-date" id="departure-date-field" value="4 июля 2017">
         <button class="btn-calendar" type="button"></button>
       </p>
-      <p class="wrapper-number-adults">
+      <p class="wrapper-number-adults open-block">
         <label for="number-adults-field">Взрослые:</label>
         <button class="decrement-icon" type="button"></button>
         <input type="text" name="numble-adults" id="numble-adults-field" value="2">
         <button class="increment-icon" type="button"></button>
       </p>
-      <p class="wrapper-number-children">
+      <p class="wrapper-number-children open-block">
         <label for="number-children-field">Дети:</label>
         <button class="decrement-icon" type="button"></button>
         <input type="text" name="number-children" id="number-children-field" value="0">
         <button class="increment-icon" type="button"></button>
       </p>
-      <button class="btn-search" type="submit">Найти</button>
+      <button class="btn-search btn-search-open" type="submit">Найти</button>
     </form>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
