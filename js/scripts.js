@@ -48,7 +48,7 @@ btnOpen.addEventListener('click', function (event) {
   }
 });
 
-overlay.addEventListener('click', function(event) {
+overlay.addEventListener('click', function (event) {
   if (modal.classList.contains('modal-search-form-open')) {
     overlay.classList.add('overlay-close');
     modal.classList.add('modal-search-form-close');
